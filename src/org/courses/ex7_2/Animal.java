@@ -1,6 +1,8 @@
-package org.courses.ex5_4;
+package org.courses.ex7_2;
 
-public class Animal {
+import java.io.Serializable;
+
+public class Animal implements Serializable {
 
     public String name;
     protected String breed;
@@ -32,4 +34,5 @@ public class Animal {
                 ", age=" + age +
                 '}';
     }
+
 }

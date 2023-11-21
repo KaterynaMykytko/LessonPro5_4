@@ -1,11 +1,21 @@
-package org.courses.ex5_4;
+package org.courses.ex7_2;
 
+import java.io.Serializable;
 import java.lang.reflect.Field;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Serializable {
 
     public Cat(String name, String breed, int age) {
         super(name, breed, age);
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", breed='" + breed + '\'' + "," +
+                "age='" + super.getAge() +
+                '}';
     }
 
     public void changeFields() {
@@ -27,6 +37,7 @@ public class Cat extends Animal {
             throw new RuntimeException("Exception while changing fields by reflection", e);
         }
     }
+
 }
 
 
